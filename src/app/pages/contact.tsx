@@ -119,71 +119,105 @@ export function ContactPage() {
                 viewport={{ once: true }}
               >
                 <Card>
-                  <form
-  action="https://formspree.io/f/YOZGAN_FORM_ID" // <-- shu yerga Formspree URL
-  method="POST"
-  className="space-y-6"
->
-  <div className="relative">
-    <label htmlFor="name" className={`absolute left-4 transition-all duration-300 ${focusedField === 'name' || formData.name ? 'top-2 text-xs text-primary' : 'top-1/2 -translate-y-1/2 text-muted-foreground'}`}>
-      Your Name
-    </label>
-    <input
-      type="text"
-      id="name"
-      name="name" // name qo'shish juda muhim
-      value={formData.name}
-      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-      onFocus={() => setFocusedField('name')}
-      onBlur={() => setFocusedField(null)}
-      className="w-full px-4 pt-8 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all"
-      required
-    />
-  </div>
-
-  <div className="relative">
-    <label htmlFor="email" className={`absolute left-4 transition-all duration-300 ${focusedField === 'email' || formData.email ? 'top-2 text-xs text-primary' : 'top-1/2 -translate-y-1/2 text-muted-foreground'}`}>
-      Email Address
-    </label>
-    <input
-      type="email"
-      id="email"
-      name="email" // name qo'shish
-      value={formData.email}
-      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-      onFocus={() => setFocusedField('email')}
-      onBlur={() => setFocusedField(null)}
-      className="w-full px-4 pt-8 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all"
-      required
-    />
-  </div>
-
-  <div className="relative">
-    <label htmlFor="message" className={`absolute left-4 transition-all duration-300 ${focusedField === 'message' || formData.message ? 'top-2 text-xs text-primary' : 'top-6 text-muted-foreground'}`}>
-      Your Message
-    </label>
-    <textarea
-      id="message"
-      name="message" // name qo'shish
-      rows={6}
-      value={formData.message}
-      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-      onFocus={() => setFocusedField('message')}
-      onBlur={() => setFocusedField(null)}
-      className="w-full px-4 pt-10 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all resize-none"
-      required
-    />
-  </div>
-
-  <motion.button
-    type="submit"
-    whileHover={{ scale: 1.02 }}
-    whileTap={{ scale: 0.98 }}
-    className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-lg hover:shadow-primary/50 transition-all flex items-center justify-center gap-2"
-  >
-    Send Message <Send size={20} />
-  </motion.button>
-</form>
+                  <form className="space-y-6" action="https://formspree.io/f/xaqjoqyv"method="POST">
+                  
+                    <div className="relative">
+                      <label
+                        htmlFor="name"
+                        className={`absolute left-4 transition-all duration-300 ${
+                          focusedField === 'name' || formData.name
+                            ? 'top-2 text-xs text-primary'
+                            : 'top-1/2 -translate-y-1/2 text-muted-foreground'
+                        }`}
+                      >
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onFocus={() => setFocusedField('name')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 pt-8 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all"
+                      />
+                    </div>
+                    
+                    <div className="relative">
+                      <label
+                        htmlFor="email"
+                        className={`absolute left-4 transition-all duration-300 ${
+                          focusedField === 'email' || formData.email
+                            ? 'top-2 text-xs text-primary'
+                            : 'top-1/2 -translate-y-1/2 text-muted-foreground'
+                        }`}
+                      >
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onFocus={() => setFocusedField('email')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 pt-8 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all"
+                      />
+                    </div>
+                    
+                    <div className="relative">
+                      <label
+                        htmlFor="company"
+                        className={`absolute left-4 transition-all duration-300 ${
+                          focusedField === 'company' || formData.company
+                            ? 'top-2 text-xs text-primary'
+                            : 'top-1/2 -translate-y-1/2 text-muted-foreground'
+                        }`}
+                      >
+                        Company (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        onFocus={() => setFocusedField('company')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 pt-8 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all"
+                      />
+                    </div>
+                    
+                    <div className="relative">
+                      <label
+                        htmlFor="message"
+                        className={`absolute left-4 transition-all duration-300 ${
+                          focusedField === 'message' || formData.message
+                            ? 'top-2 text-xs text-primary'
+                            : 'top-6 text-muted-foreground'
+                        }`}
+                      >
+                        Your Message
+                      </label>
+                      <textarea
+                        id="message"
+                        rows={6}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onFocus={() => setFocusedField('message')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 pt-10 pb-4 bg-input-background border border-border rounded-xl focus:border-primary focus:outline-none transition-all resize-none"
+                      />
+                    </div>
+                    
+                    <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-lg hover:shadow-primary/50 transition-all flex items-center justify-center gap-2"
+                    >
+                      Send Message <Send size={20} />
+                    </motion.button>
+                  </form>
                 </Card>
               </motion.div>
             </div>
