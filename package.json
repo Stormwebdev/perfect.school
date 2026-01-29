@@ -7,8 +7,8 @@
     "build": "vite build",
     "dev": "vite"
   },
-  "engines": {
-  "node": "18.x"
+"engines": {
+  "node": ">=18 <=20"
 },
 
   "dependencies": {
