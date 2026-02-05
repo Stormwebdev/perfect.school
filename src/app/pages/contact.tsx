@@ -119,7 +119,7 @@ export function ContactPage() {
                 viewport={{ once: true }}
               >
                 <Card>
-                  <form className="space-y-6" action="https://formspree.io/f/xaqjoqyv"method="POST">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                   
                     <div className="relative">
                       <label
